@@ -28,9 +28,9 @@ class Contact extends Component {
           />
 
           <div style={{ float: "right" }}>
-            <i className="fas fa-pencil-alt p-2">
-              <Link to={`/contact/edit/${id}`} />
-            </i>
+            <Link to={`/contact/edit/${id}`}>
+              <i className="fas fa-pencil-alt p-2 text-dark" />
+            </Link>
             <i
               className="fas fa-times text-danger"
               onClick={this.handleDelete.bind(this, id)}
@@ -48,4 +48,7 @@ class Contact extends Component {
   }
 }
 
+Contact.propTypes = {
+  contact: PropTypes.object.isRequired
+};
 export default Contact;
